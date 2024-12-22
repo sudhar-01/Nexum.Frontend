@@ -1,0 +1,45 @@
+{
+  "name": "nexum",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "public/electron.js",
+  "scripts": {
+    "electron": "electron .",
+    "dev": "vite",
+    "build": "tsc -b && vite build && electron-builder",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.myapp",
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "directories": {
+      "output": "release"
+    }
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "electron-is-dev": "^3.0.1",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.13.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.18.1",
+    "vite": "^6.0.3"
+  }
+}
